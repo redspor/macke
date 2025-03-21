@@ -20,6 +20,7 @@ def index(m3u8):
         "accept-language": "tr-TR, tr;q = 0.9",
         "origin": "https://www.apiredirect.buzz",
         "referer": "https://www.apiredirect.buzz/",
+        'content-type': 'image/jpg',
         'sec-ch-ua': '"Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108"',
         'sec-ch-ua-mobile': '?0',
         'sec-ch-ua-platform': '"Windows"',
@@ -30,11 +31,11 @@ def index(m3u8):
     }
     ts = requests.get(source, headers=headers)
     tsal = ts.text
-    tsal = tsal.replace(videoid+'_','https://urchin-app-kbhg3.ondigitalocean.app/getstream?param=getts&source=https://edge10.xmediaget.com/hls-live/'+videoid+'/1/'+videoid+'_')
+    tsal = tsal.replace(videoid+'_','https://proxyyyyyyy.simitcigazozcuknk.workers.dev/proxy/https://urchin-app-kbhg3.ondigitalocean.app/getstream?param=getts&source=https://edge10.xmediaget.com/hls-live/'+videoid+'/1/'+videoid+'_')
     if "internal" in tsal:
-        tsal = tsal.replace('internal','https://urchin-app-kbhg3.ondigitalocean.app/getstream?param=getts&source=https://edge10.xmediaget.com/hls-live/'+videoid+'/1/internal')
+        tsal = tsal.replace('internal','https://proxyyyyyyy.simitcigazozcuknk.workers.dev/proxy/https://urchin-app-kbhg3.ondigitalocean.app/getstream?param=getts&source=https://edge10.xmediaget.com/hls-live/'+videoid+'/1/internal')
     if "segment" in tsal:
-        tsal = tsal.replace('\n'+'media','\n'+'https://urchin-app-kbhg3.ondigitalocean.app/getstream?param=getts&source=https://edge10.xmediaget.com/hls-live/'+videoid+'/1/media')
+        tsal = tsal.replace('\n'+'media','\n'+'https://proxyyyyyyy.simitcigazozcuknk.workers.dev/proxy/https://urchin-app-kbhg3.ondigitalocean.app/getstream?param=getts&source=https://edge10.xmediaget.com/hls-live/'+videoid+'/1/media')
     return tsal
 
 @app.route('/getm3u8',methods=['GET'])
@@ -49,6 +50,7 @@ def getm3u8():
         "accept-language": "tr-TR, tr;q = 0.9",
         "origin": "https://www.maltinok.com",
         "referer": "https://www.maltinok.com/",
+        'content-type': 'image/jpg',
         'sec-ch-ua': '"Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108"',
         'sec-ch-ua-mobile': '?0',
         'sec-ch-ua-platform': '"Windows"',
@@ -76,6 +78,7 @@ def getstream():
             'accept-language': 'tr-TR,tr;q=0.9',
             'origin': 'https://www.apiredirect.buzz',
             'referer': 'https://www.apiredirect.buzz/',
+            'content-type': 'image/jpg',
             'sec-ch-ua': '"Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108"',
             'sec-ch-ua-mobile': '?0',
             'sec-ch-ua-platform': '"Windows"',
